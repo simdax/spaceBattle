@@ -1,0 +1,94 @@
+
+#vaisseau  {
+	user-select: none;
+}
+
+body{
+	z-index: 10;
+	perspective: 1000px;
+	overflow: hidden;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	max-width: 100vw;
+	max-height: 100vh;
+	perspective-origin: 50%;
+	transform-origin: 50%; 
+	animation: 2s soleil ease-in-out 0s infinite alternate;
+}
+
+p{
+	position: fixed;
+	bottom: 5vh; 
+	left: 50vw;
+	border: 1px solid yellow;
+	background: rgba(200,100,0,0.5);
+	color: yellow;
+}
+												/*transform: rotateX(1deg);*/
+/*				transform: matrix3d:(
+						1,0,01,0,
+						0,1,0,10,
+						0,0,1,0,
+						0,0,0,1
+											);
+										*/	
+									@keyframes colorVaisseau{
+										0%{
+											filter: saturate(0);
+										}
+										60%{
+											filter: saturate(10);
+										}
+									}
+									#vaisseau{
+										/*animation: colorVaisseau 2s linear 0s infinite alternate; */
+										filter: url('#erode');
+									}
+
+
+@keyframes goBack{
+	100%{
+		transform: translateX(-100vw);
+	}
+}
+
+@keyframes rocket{
+	O%{
+	}
+	100%{
+		transform: translateX(10000px);
+	}
+}
+
+@keyframes soleil{
+	0%{
+		background: radial-gradient(1000px,  red 1%,white 5%,grey 55%,black) 
+	}
+	10%{
+		background: radial-gradient(900px,  red 2%,white 8%,grey 50%,black) 
+		}			20%{
+			background: radial-gradient(900px,  rgb(200,10,100) 3%,white 9%,grey 50%,black) 
+			}			30%{
+				background: radial-gradient(900px,  red 4%,white 10%,grey 50%,black) 
+				}			40%{
+					background: radial-gradient(900px,  red 5%,white 11%,grey 50%,black) 
+					}			50%{
+						background: radial-gradient(900px,  pink 6%,white 12%,grey 50%,black) 
+						}			55%{
+							background: radial-gradient(900px,  red 7%,white 13%,grey 50%,black) 
+							}		65%{
+								background: radial-gradient(900px,  red 8%,white 13%,grey 50%,black) 
+								}		75%{
+									background: radial-gradient(900px,  red 9%,white 13%,grey 50%,black) 
+									}		85%{
+										background: radial-gradient(1000px,  red 10%,white 13%,grey 50%,black) 
+										}		90%{
+											background: radial-gradient(1000px,  red 11%,white 13%,grey 50%,black) 
+											}		95%{
+												background: radial-gradient(1000px,  red 12%,white 13%,grey 50%,black) 
+												}			100%{
+													background: radial-gradient(1000px,  red 13%,white 15%,grey 50%,black) 
+												}
+											}
+	
