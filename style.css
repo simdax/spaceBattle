@@ -1,6 +1,6 @@
 
 #vaisseau  {
-	user-select: none;
+	/*user-select: none;*/
 }
 
 body{
@@ -43,7 +43,7 @@ p{
 									}
 									#vaisseau{
 										/*animation: colorVaisseau 2s linear 0s infinite alternate; */
-										filter: url('#erode');
+										/*filter: url('svg/filters.svg#erode');*/
 									}
 
 
